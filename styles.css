@@ -1,0 +1,199 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+h1, h2, h3 {
+  color: #1f3c88;
+}
+#welcome {
+  background-image: url('istockphoto-2178858107-2048x2048 copy.jpg'); /* <-- Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+#welcome .container {
+  background-color: rgba(0, 0, 0, 0.4); /* Optional overlay for better text visibility */
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+
+/* Header */
+header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #1f3c88;
+  padding: 1rem 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #1f3c88;
+  font-weight: bold;
+}
+
+nav a.active,
+nav a:hover {
+  color: #ff6b00;
+}
+
+/* Hero / Welcome Section */
+#welcome {
+  background-color: #f0f4f8;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+/* Services */
+#services .services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.service-card h3 {
+  margin-bottom: 1rem;
+}
+
+.btn {
+  background-color: #1f3c88;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ff6b00;
+}
+
+/* Projects */
+#projects ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* Testimonials */
+#testimonials .testimonial {
+  background-color: #ffffff;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-left: 4px solid #1f3c88;
+  font-style: italic;
+}
+
+/* FAQs */
+.faq .faq-item {
+  margin-bottom: 1.5rem;
+}
+
+.faq-item h3 {
+  color: #1f3c88;
+  margin-bottom: 0.5rem;
+}
+
+/* Illustration / Solus Section */
+.illustration {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 3rem 0;
+  background-color: #fff3e6;
+}
+
+.illustration .image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.illustration .text-container {
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+/* Contact & Partners */
+#contact .contact-info {
+  margin-bottom: 2rem;
+}
+
+.partners {
+  margin-top: 2rem;
+}
+
+.partner-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.partner-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Footer */
+footer {
+  background-color: #1f3c88;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    margin-top: 1rem;
+  }
+
+  .illustration {
+    flex-direction: column;
+    text-align: center;
+  }
+}
