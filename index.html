@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BuildPro Construction</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
@@ -69,15 +70,21 @@
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials">
-    <div class="container">
-      <h2>What Our Clients Say</h2>
-      <div class="testimonial">
-        <p>"BuildPro transformed our old house into a modern masterpiece!" - Jane K.</p>
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials" data-aos="fade-up">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial" data-aos="zoom-in">
+        <p>"BuildPro Construction delivered our dream home exactly as promised. Professional and efficient!"</p>
+        <h4>— Jane Otieno, Kisumu</h4>
       </div>
-      <div class="testimonial">
-        <p>"Professional team and timely delivery. Highly recommended!" - Michael O.</p>
+      <div class="testimonial" data-aos="zoom-in">
+        <p>"Timely, high-quality service. I highly recommend them for any project, big or small."</p>
+        <h4>— Michael Ochieng, Nairobi</h4>
+      </div>
+      <div class="testimonial" data-aos="zoom-in">
+        <p>"We’ve worked with many contractors — none compare to this level of commitment and craftsmanship."</p>
+        <h4>— Grace Wanjiru, Eldoret</h4>
       </div>
     </div>
   </section>
@@ -107,28 +114,26 @@
       <p>Have more questions? Contact us at <a href="mailto:info@constructionsite.com">info@briannyabuto78@gmail.com</a>.</p>
     </div>
   </section>
+  <!-- Partners -->
+  <section class="partners" id="partners" data-aos="fade-up">
+    <h2>Our Trusted Partners</h2>
+    <div class="slider">
+      <div class="slide-track">
+        <img class="slide" src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Partner 1" />
+        <img class="slide" src="https://cdn-icons-png.flaticon.com/512/732/732228.png" alt="Partner 2" />
+        <img class="slide" src="https://cdn-icons-png.flaticon.com/512/732/732190.png" alt="Partner 3" />
+        <img class="slide" src="https://cdn-icons-png.flaticon.com/512/732/732212.png" alt="Partner 4" />
+      </div>
+    </div>
+  </section>
 
   <!-- Contact Section -->
-  <section id="contact">
-    <div class="container contact-info">
-      <h2>Contact Us</h2>
-      <p>Email: contact@buildpro.com</p>
-      <p>Phone: +254 797956649</p>
-      <p>Address: 254 Nairobi, Construct City</p>
-      <button class="btn contact-btn">Send Message</button>
-    </div>
-    <div class="partners">
-      <p class="partner-title">Our Partners</p>
-      <div class="partner-logos">
-        <img src="Bamburi" alt="Bamburi Cement">
-        <img src="images/eapcc.svg" alt="East African Portland Cement">
-        <img src="images/arm-cement.svg" alt="ARM Cement">
-        <img src="images/crown-paints.svg" alt="Crown Paints">
-        <img src="images/devki.svg" alt="Devki Steel Mills">
-        <img src="images/kenya-power.svg" alt="Kenya Power">
-        <img src="images/nhc.svg" alt="National Housing Corporation">
-        <img src="images/china-wuyi.svg" alt="China Wu Yi">
-      </div>
+  <section class="contact" id="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <div class="contact-details">
+      <p><strong>Brian:</strong> <a href="tel:+254797956649">0797 956 649</a></p>
+      <p><strong>Julius:</strong> <a href="tel:+254707906011">0707 906 011</a></p>
+      <p><strong>Facebook:</strong> <a href="https://facebook.com/WiseBrian" target="_blank">Wise Brian</a></p>
     </div>
   </section>
 
@@ -139,6 +144,8 @@
     </div>
   </footer>
   <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 
 
 </body>
