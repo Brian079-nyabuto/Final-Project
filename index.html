@@ -149,6 +149,20 @@
   <script src="script.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>AOS.init();</script>
+  !-- Inquiry Modal -->
+<div id="inquiryModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+    <h3>Inquire About <span id="serviceName"></span></h3>
+    <p>Please enter your phone number and we will contact you shortly.</p>
+    <input type="tel" id="phoneInput" placeholder="Enter your phone number" required />
+    <div class="modal-actions">
+      <button id="submitInquiry" class="btn">Submit</button>
+      <button id="cancelInquiry" class="btn cancel">Cancel</button>
+    </div>
+  </div>
+</div>
+  
 
 
 </body>
