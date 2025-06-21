@@ -35,12 +35,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (phone) {
         alert(`Thank you! We'll contact you at ${phone} about ${service}.`);
-        // You can also send this to a server here using fetch() or AJAX
-      } else {
-        alert("Phone number is required to proceed.");
-      }
-    });
-  });
-</script>
-
-                          
+        // You can also send this to a server here using fetch() or 
