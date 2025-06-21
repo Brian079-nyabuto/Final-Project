@@ -28,8 +28,19 @@ document.addEventListener("DOMContentLoaded", () => {
         targetSection.scrollIntoView({ behavior: "smooth" });
       }
     });
-  });
-});
+    document.querySelectorAll('.inquire-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const service = button.getAttribute('data-service');
+      const phone = prompt(`Enter your phone number to inquire about ${service}:`);
 
+      if (phone) {
+        alert(`Thank you! We'll contact you at ${phone} about ${service}.`);
+        // You can also send this to a server here using fetch() or AJAX
+      } else {
+        alert("Phone number is required to proceed.");
+      }
+    });
+  });
+</script>
 
                           
