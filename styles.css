@@ -275,7 +275,7 @@ h2 {
 }
 
 .contact-details a {
-  color: #007BFF;
+  color: green;
   text-decoration: none;
 }
 
@@ -292,7 +292,7 @@ h2 {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #007BFF;
+    background-color: #dark gray;
     position: absolute;
     top: 60px;
     right: 20px;
@@ -1280,4 +1280,4 @@ h2 {
 }
 
 .slider {
-  overflow: hidde
+  overflow: hiddok
