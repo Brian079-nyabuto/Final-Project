@@ -1,13 +1,33 @@
-// Wait for the DOM to fully load
+// script.js (Updated with WhatsApp integration + original features)
+
 document.addEventListener("DOMContentLoaded", () => {
-  // Handle Inquire button clicks
   const inquireButtons = document.querySelectorAll(".inquire-btn");
+  const inquiryForm = document.getElementById("inquiry-form");
+  const phoneForm = document.getElementById("phone-form");
+  let selectedService = "our services";
+
+  // Handle Inquire button click → scroll to form and set selected service
   inquireButtons.forEach(button => {
     button.addEventListener("click", () => {
-      const service = button.getAttribute("data-service");
-      alert(`Thank you for your interest in ${service}.\nOur team will contact you shortly!`);
+      selectedService = button.getAttribute("data-service") || "our services";
+      inquiryForm.scrollIntoView({ behavior: "smooth" });
     });
   });
+
+  // Handle phone form submission and redirect to WhatsApp
+  if (phoneForm) {
+    phoneForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const phoneInput = document.getElementById("phone-number").value.trim();
+
+      if (phoneInput) {
+        const message = `Hi, I'm interested in ${selectedService}. My number is ${phoneInput}`;
+        const whatsappURL = `https://wa.me/254797956649?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, "_blank");
+        phoneForm.reset();
+      }
+    });
+  }
 
   // Handle Contact button click
   const contactBtn = document.querySelector(".contact-btn");
@@ -17,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Optional: Smooth scrolling for navigation links
+  // Smooth scrolling for navigation links
   const navLinks = document.querySelectorAll("nav a[href^='#']");
   navLinks.forEach(link => {
     link.addEventListener("click", event => {
@@ -28,11 +48,5 @@ document.addEventListener("DOMContentLoaded", () => {
         targetSection.scrollIntoView({ behavior: "smooth" });
       }
     });
-    document.querySelectorAll('.inquire-btn').forEach(button => {
-    button.addEventListener('click', () => {
-      const service = button.getAttribute('data-service');
-      const phone = prompt(`Enter your phone number to inquire about ${service}:`);
-
-      if (phone) {
-        alert(`Thank you! We'll contact you at ${phone} about ${service}.`);
-        // You can also send this to a server here using fetch() or 
+  });
+});
